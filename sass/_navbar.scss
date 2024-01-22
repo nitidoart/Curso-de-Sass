@@ -1,0 +1,55 @@
+$display: display;
+.nav {
+    background-color: steelblue;
+    color: black;
+
+    &__container {
+        width: 90%;
+        margin: 0 auto;
+        height: 70px;
+        #{$display}: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        gap: 1em;
+    }
+
+    &__item {
+        color: white;
+        text-decoration: none;
+        transition: transform 0.3s ease-in-out;
+
+        &--active {
+            color: greenyellow;
+            text-decoration: line-through;
+        }
+
+        &:hover {
+            color: rgb(223, 223, 223);
+            animation: vibrar 0.5s ease-in-out infinite;
+        }
+
+        @keyframes vibrar {
+            25% {
+                transform: translateX(-3px);
+            }
+
+            50% {
+                transform: translateX(3px);
+            }
+
+            75% {
+                transform: translateX(-1px);
+            }
+
+            100% {
+                transform: translateX(1px);
+            }
+        }
+    }
+
+    @media (min-width: 764px) {
+        &__container {
+            justify-content: flex-end;
+        }
+    }
+}
