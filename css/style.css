@@ -53,4 +53,22 @@ body {
   }
 }
 
+/* @use 'animations'; */
+.hero__container {
+  height: calc(100vh - 70px);
+  background-image: linear-gradient(rgba(130, 130, 130, 0.4274509804), rgba(0, 9, 28, 0.4588235294)), url("../img/back.jpg");
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position:center;
+}
+.hero__texts {
+  color: white;
+}
+.hero__title {
+  font-size: 3rem;
+}
+
 /*# sourceMappingURL=style.css.map */

@@ -1,0 +1,30 @@
+@use 'mixinsfunc';
+
+@mixin arreglar-imagen{
+    background:{
+        size: cover;
+        repeat: no-repeat;
+        position: center;
+    };
+}
+
+.hero{
+    &__container{
+        height: calc(100vh - 70px);
+        background-image: linear-gradient(#8282826d,#00091c75),
+        url('../img/back.jpg');
+
+        @include mixinsfunc.crear-flexbox(center);
+
+        @include arreglar-imagen;
+    }
+
+    &__texts{
+        color: white;
+    }
+
+    &__title{
+        font-size: 3rem;
+    }
+
+}

@@ -1,4 +1,5 @@
-$display: display;
+@use 'mixinsfunc';
+
 .nav {
     background-color: steelblue;
     color: black;
@@ -7,9 +8,9 @@ $display: display;
         width: 90%;
         margin: 0 auto;
         height: 70px;
-        #{$display}: flex;
-        align-items: center;
-        justify-content: space-evenly;
+        
+        @include mixinsfunc.crear-flexbox(space-evenly);
+        
         gap: 1em;
     }
 
